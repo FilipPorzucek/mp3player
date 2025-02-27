@@ -18,21 +18,18 @@
          <children>
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="Open Mp3 file">
+                <Menu mnemonicParsing="false" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem fx:id="fileMenuItem" mnemonicParsing="false" text="Open Mp3 player" />
+                    <MenuItem fx:id="dirMenuItem" mnemonicParsing="false" text="Open directory" />
+                    <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="Close" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Open directory">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Close">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
+                  <Menu fx:id="fileMenuItem1" mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
               </menus>
             </MenuBar>
          </children></AnchorPane>
@@ -40,7 +37,7 @@
    <center>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <TableView prefHeight="352.0" prefWidth="316.0">
+            <TableView fx:id="contentTable" prefHeight="352.0" prefWidth="316.0">
               <columns>
                 <TableColumn prefWidth="75.0" text="C1" />
                 <TableColumn prefWidth="75.0" text="C2" />
@@ -51,11 +48,11 @@
    <bottom>
       <HBox BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Button" />
-            <ToggleButton mnemonicParsing="false" text="ToggleButton" />
-            <Button mnemonicParsing="false" text="Button" />
-            <Slider />
-            <Slider />
+            <Button fx:id="previousButton" mnemonicParsing="false" text="Button" />
+            <ToggleButton fx:id="playButton" mnemonicParsing="false" text="ToggleButton" />
+            <Button fx:id="nextButton" mnemonicParsing="false" text="Button" />
+            <Slider fx:id="volumeSlider" />
+            <Slider fx:id="progresSlider" />
          </children></HBox>
    </bottom>
 </BorderPane>
