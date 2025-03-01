@@ -1,33 +1,12 @@
-package com.filip.mp3player.main;
+package com.filip.mp3player.controler;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.Slider;
-import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 
-public class MainControler {
-
-    @FXML
-    private MenuItem aboutMenuItem;
-
-    @FXML
-    private MenuItem closeMenuItem;
-
-    @FXML
-    private TableView<?> contentTable;
-
-    @FXML
-    private MenuItem dirMenuItem;
-
-    @FXML
-    private MenuItem fileMenuItem;
-
-    @FXML
-    private Menu fileMenuItem1;
+public class ControlPaneControler {
 
     @FXML
     private Button nextButton;
@@ -47,11 +26,10 @@ public class MainControler {
     public void initialize(){
         configureButtons();
         configureVolume();
-
     }
 
     private void configureVolume() {
-        volumeSlider.addEventFilter(MouseEvent.MOUSE_PRESSED,event->{
+        volumeSlider.addEventFilter(MouseEvent.MOUSE_PRESSED, event->{
             System.out.println("Wcisnieto przycisk na suwaku głośności");
         });
     }

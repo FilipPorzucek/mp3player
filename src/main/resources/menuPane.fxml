@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0" fx:controller="com.filip.mp3player.controler.MenuPaneControler">
+    <MenuBar>
+
+            <Menu mnemonicParsing="false" text="File">
+
+                    <MenuItem fx:id="fileMenuItem" mnemonicParsing="false" text="Open Mp3 player" />
+                    <MenuItem fx:id="dirMenuItem" mnemonicParsing="false" text="Open directory" />
+                    <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="Close" />
+
+            </Menu>
+            <Menu fx:id="fileMenuItem1" mnemonicParsing="false" text="Help">
+
+                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" />
+
+            </Menu>
+
+    </MenuBar>
+
+</AnchorPane>
