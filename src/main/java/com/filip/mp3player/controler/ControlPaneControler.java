@@ -26,6 +26,12 @@ public class ControlPaneControler {
     public void initialize(){
         configureButtons();
         configureVolume();
+        configureSlider();
+    }
+
+    private void configureSlider() {
+        volumeSlider.valueProperty().addListener((observable,oldValue,newValue)->
+                System.out.println("Zmiana głóśności"+newValue.doubleValue()));
     }
 
     private void configureVolume() {
