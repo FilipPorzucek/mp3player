@@ -23,31 +23,31 @@ public class ControlPaneControler {
     @FXML
     private Slider volumeSlider;
 
-    public void initialize(){
-        configureButtons();
-        configureVolume();
-        configureSlider();
+    public Button getNextButton() {
+        return nextButton;
     }
 
-    private void configureSlider() {
-        volumeSlider.valueProperty().addListener((observable,oldValue,newValue)->
-                System.out.println("Zmiana głóśności"+newValue.doubleValue()));
+    public ToggleButton getPlayButton() {
+        return playButton;
     }
 
-    private void configureVolume() {
-        volumeSlider.addEventFilter(MouseEvent.MOUSE_PRESSED, event->{
-            System.out.println("Wcisnieto przycisk na suwaku głośności");
-        });
+    public Button getPreviousButton() {
+        return previousButton;
     }
 
-    private void configureButtons() {
-        previousButton.setOnAction(event-> System.out.println("Poprzednia piosenka"));
-        nextButton.setOnAction((x-> System.out.println("Następna piosenka")));
-        playButton.setOnAction(event->{
-            if(playButton.isSelected()){
-                System.out.println("Play");
-            }else System.out.println("Stop");
-        });
+    public Slider getProgresSlider() {
+        return progresSlider;
     }
+
+    public Slider getVolumeSlider() {
+        return volumeSlider;
+    }
+
+
+
+
+
+
+
 
 }

@@ -10,7 +10,7 @@
 
             <Menu mnemonicParsing="false" text="File">
 
-                    <MenuItem fx:id="fileMenuItem" mnemonicParsing="false" text="Open Mp3 player" />
+                    <MenuItem fx:id="fileMenuItem" mnemonicParsing="false" text="Open Mp3 file" />
                     <MenuItem fx:id="dirMenuItem" mnemonicParsing="false" text="Open directory" />
                     <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="Close" />
 

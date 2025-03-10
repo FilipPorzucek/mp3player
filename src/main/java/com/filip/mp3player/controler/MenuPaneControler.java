@@ -1,9 +1,18 @@
 package com.filip.mp3player.controler;
 
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MenuPaneControler   {
 
@@ -22,5 +31,47 @@ public class MenuPaneControler   {
     @FXML
     private Menu fileMenuItem1;
 
+    public MenuItem getAboutMenuItem() {
+        return aboutMenuItem;
+    }
+
+    public MenuItem getCloseMenuItem() {
+        return closeMenuItem;
+    }
+
+    public MenuItem getDirMenuItem() {
+        return dirMenuItem;
+    }
+
+    public MenuItem getFileMenuItem() {
+        return fileMenuItem;
+    }
+
+    public Menu getFileMenuItem1() {
+        return fileMenuItem1;
+    }
+    public void initialize(){
+        configureMenu();
+    }
+
+    private void configureMenu() {
+        closeMenuItem.setOnAction(x-> Platform.exit());
+
+        aboutMenuItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Parent parent = FXMLLoader.load(getClass().getResource("/fxml/aboutPane.fxml"));
+                    Scene scene = new Scene(parent);
+                    Stage stage = new Stage();
+                    stage.setTitle("Mp3player-about");
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+    }
 }
 
