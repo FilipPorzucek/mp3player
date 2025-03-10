@@ -3,6 +3,7 @@ package com.filip.mp3player.controler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 
@@ -22,6 +23,12 @@ public class ControlPaneControler {
 
     @FXML
     private Slider volumeSlider;
+    @FXML
+    private TextField messageTextField;
+
+    public TextField getMessageTextField() {
+        return messageTextField;
+    }
 
     public Button getNextButton() {
         return nextButton;

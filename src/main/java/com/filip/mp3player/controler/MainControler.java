@@ -144,6 +144,10 @@ public class MainControler {
 
 
     }
+
+    private void showwMessage(String message){
+        controlPaneController.getMessageTextField().setText(message);
+    }
     
 
 
